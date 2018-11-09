@@ -1,0 +1,30 @@
+{
+  "name": "@eidoo/ethapi-lib",
+  "version": "0.1.0",
+  "description": "A minimalistic wrapper for the ETH API service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "eidoo",
+    "eth",
+    "api"
+  ],
+  "engines": {
+    "node": "8.x || 9.x || 10.x"
+  },
+  "author": "Eidoo Sagl",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "5.8.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "jest": "23.6.0"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "bignumber.js": "8.0.1",
+    "web3": "0.20.7"
+  }
+}
