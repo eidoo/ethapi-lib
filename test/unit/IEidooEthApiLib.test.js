@@ -8,11 +8,15 @@ describe('IEidooEthApiLib (unit tests)', () => {
       (new IEidooEthApiLib({})).callAsync(),
     ).rejects.toEqual(Error('Method "callAsync" has not been implemented yet.')))
   })
-
   describe('transactionCallAsync', () => {
     it('should reject if called', () => expect(
       (new IEidooEthApiLib({})).transactionCallAsync(),
     ).rejects.toEqual(Error('Method "transactionCallAsync" has not been implemented yet.')))
+  })
+  describe('getAccountTxsDetailsAsync', () => {
+    it('should reject if called', () => expect(
+      (new IEidooEthApiLib({})).getAccountTxsDetailsAsync(),
+    ).rejects.toEqual(Error('Method "getAccountTxsDetailsAsync" has not been implemented yet.')))
   })
   describe('getAddressNonceAsync', () => {
     it('should reject if called', () => expect(
