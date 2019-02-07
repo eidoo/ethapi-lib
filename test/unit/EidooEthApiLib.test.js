@@ -1,8 +1,8 @@
 /* eslint-env node, jest */
 const sandbox = require('sinon').createSandbox()
 
-const { EthApiError } = require('../../lib/EidooEthApiLib')
-const { EidooEthApiLib } = require('../../lib/EidooEthApiLib')
+const EthApiLibError = require('../../lib/Errors/EthApiLibError')
+const EidooEthApiLib = require('../../lib/EidooEthApiLib')
 const transacionDetailsResponse = require('../fixtures/transactionDetailsResponse')
 
 afterEach(() => {
@@ -58,10 +58,10 @@ describe('EidooEthApiLib (unit tests)', () => {
       expect(accountTransacionsDetails).toMatchObject(transacionDetailsResponse)
     })
 
-    it('should returns EthApiError if there was an error during api call', async () => {
+    it('should returns EthApiLibError if there was an error during api call', async () => {
       const tradingWalletAddress = '0xAaD5329c065B61f8d44d3d0417068eA74021Fb79'
-      sandbox.stub(eidooEthApiLib, 'callAsync').throws(new EthApiError())
-      return expect(eidooEthApiLib.getAccountTxsDetailsAsync(tradingWalletAddress)).rejects.toBeInstanceOf(EthApiError)
+      sandbox.stub(eidooEthApiLib, 'callAsync').throws(new EthApiLibError())
+      return expect(eidooEthApiLib.getAccountTxsDetailsAsync(tradingWalletAddress)).rejects.toBeInstanceOf(EthApiLibError)
     })
   })
 })
