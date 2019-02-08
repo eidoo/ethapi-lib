@@ -21,11 +21,11 @@ yarn add eidoo/ethapi-lib
 Then within your application, you can reference to the lib with the following:
 
 ```javascript
-const EidooEthApiLib = require('@eidoo/ethapi-lib')
+const { EidooEthApiLib } = require('@eidoo/ethapi-lib')
 const ethApiConfig = {
-  host: 'api.dev-shared.eidoo.io',
-  port: 3000,
-  useTLS: false,
+  host: 'eidoo-api-1.eidoo.io',
+  port: 443,
+  useTLS: true,
 }
 const ethApiLibClient = new EidooEthApiLib(ethApiConfig)
 ```
