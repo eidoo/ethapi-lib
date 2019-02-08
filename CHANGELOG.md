@@ -8,11 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- 4167 Add EthApiLibError.
+- [Add EthApiLibError](https://github.com/eidoo/ethapi-lib/issues/4).
 
 ### Changed
 
-- 4167 Improve ETHApi error handling.
+- [Improve ETHApi error handling](https://github.com/eidoo/ethapi-lib/issues/4).
 
 ## [v0.2.0](https://gitlab.com/eidoo/ethapi-lib/compare/v0.1.0...v0.2.0)
 
