@@ -30,8 +30,6 @@
     "sinon": "7.2.2"
   },
   "dependencies": {
-    "axios": "0.18.0",
-    "bignumber.js": "8.0.1",
-    "web3": "0.20.7"
+    "axios": "0.18.0"
   }
 }
