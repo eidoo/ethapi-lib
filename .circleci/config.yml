@@ -70,6 +70,24 @@ jobs:
             - node_modules
           key: v1-dependencies-node-10.15.1-{{ checksum "yarn.lock" }}
 
+  lint:
+    docker:
+      - image: circleci/node:10.15.1-stretch
+    working_directory: ~/repo
+    steps:
+      - restore_cache:
+          key: *checkout_cache_key
+      - restore_cache:
+          keys:
+            - v1-dependencies-node-10.15.1-{{ checksum "yarn.lock" }}
+      - run:
+          name: Run linter
+          command: yarn lint:ci -o reports/junit/js-lint-results.xml
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
+
   test:node-8:
     docker:
       - image: circleci/node:8.15.0-stretch
@@ -135,15 +153,18 @@ workflows:
   build-and-test:
     jobs:
       - checkout_code
-      - build:node-8:
-          requires:
-            - checkout_code
-      - build:node-9:
-          requires:
-            - checkout_code
       - build:node-10:
           requires:
             - checkout_code
+      - lint:
+          requires:
+            - build:node-10
+      - build:node-8:
+          requires:
+            - lint
+      - build:node-9:
+          requires:
+            - lint
       - test:node-8:
           requires:
             - build:node-8
@@ -152,4 +173,4 @@ workflows:
             - build:node-9
       - test:node-10:
           requires:
-            - build:node-10
+            - lint

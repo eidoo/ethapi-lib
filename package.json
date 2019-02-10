@@ -4,6 +4,8 @@
   "description": "A minimalistic wrapper for the ETH API service.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ext .js",
+    "lint:ci": "yarn lint --format junit",
     "test": "jest",
     "test:ci": "jest --runInBand --ci --reporters=default --reporters=jest-junit",
     "version:current": "echo $npm_package_version",
