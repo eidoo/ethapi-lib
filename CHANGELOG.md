@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://gitlab.com/eidoo/ethapi-lib/compare/v0.2.0...HEAD)
 
+### Added
+
+- [Add EthApiLibError](https://github.com/eidoo/ethapi-lib/issues/4).
+
+### Changed
+
+- [Improve ETHApi error handling](https://github.com/eidoo/ethapi-lib/issues/4).
+
 ## [v0.2.0](https://gitlab.com/eidoo/ethapi-lib/compare/v0.1.0...v0.2.0)
 
 ### Added
