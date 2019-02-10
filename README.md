@@ -1,6 +1,8 @@
 # Eidoo ETH API lib
 > Eidoo ETH API service wrapper.
 
+[![CircleCI](https://circleci.com/gh/eidoo/ethapi-lib.svg?style=svg)](https://circleci.com/gh/eidoo/ethapi-lib)
+
 Eidoo ETH API is an Ethereum node gateway that can be used to read or submit changes of the Ethereum network state.
 
 For release notes, please see the [CHANGELOG](./CHANGELOG.md).
