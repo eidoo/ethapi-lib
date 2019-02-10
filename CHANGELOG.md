@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://gitlab.com/eidoo/ethapi-lib/compare/v1.0.0...HEAD)
 
+### Removed
+
+- [Remove unused web3 and bignumber.js](https://github.com/eidoo/ethapi-lib/issues/11).
+
 ## [v1.0.0](https://gitlab.com/eidoo/ethapi-lib/compare/v0.2.0...v1.0.0)
 
 ### Added
