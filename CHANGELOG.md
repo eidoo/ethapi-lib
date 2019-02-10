@@ -4,15 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://gitlab.com/eidoo/ethapi-lib/compare/v0.2.0...HEAD)
+## [Unreleased](https://gitlab.com/eidoo/ethapi-lib/compare/v1.0.0...HEAD)
+
+## [v1.0.0](https://gitlab.com/eidoo/ethapi-lib/compare/v0.2.0...v1.0.0)
 
 ### Added
 
-- [Add EthApiLibError](https://github.com/eidoo/ethapi-lib/issues/4).
+- **Breaking**: [Add EthApiLibError](https://github.com/eidoo/ethapi-lib/issues/4).
+- [Add continuous integration](https://github.com/eidoo/ethapi-lib/issues/6).
+- [Add lint check during CI](https://github.com/eidoo/ethapi-lib/issues/7).
 
 ### Changed
 
 - [Improve ETHApi error handling](https://github.com/eidoo/ethapi-lib/issues/4).
+
+### Fixed
+- [Use yarn test in test:ci script](https://github.com/eidoo/ethapi-lib/issues/9).
 
 ## [v0.2.0](https://gitlab.com/eidoo/ethapi-lib/compare/v0.1.0...v0.2.0)
 
