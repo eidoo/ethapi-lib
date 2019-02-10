@@ -7,7 +7,7 @@
     "lint": "eslint . --ext .js",
     "lint:ci": "yarn lint --format junit",
     "test": "jest",
-    "test:ci": "jest --runInBand --ci --reporters=default --reporters=jest-junit",
+    "test:ci": "yarn test --runInBand --ci --reporters=default --reporters=jest-junit",
     "version:current": "echo $npm_package_version",
     "release": "git add . && yarn version && VERSION=$(yarn -s version:current) && git push origin release/v$VERSION && git push origin v$VERSION && git checkout master && git pull --rebase && git rebase release/v$VERSION && git push origin master && git checkout dev && git pull --rebase && git rebase release/v$VERSION && git push origin dev"
   },
