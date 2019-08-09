@@ -1,5 +1,9 @@
 version: 2.0
 
+aliases:
+  - &docker-settings
+      - image: circleci/node:10.16.1
+
 templates:
   checkout_cache_key: &checkout_cache_key
     v1-repo-{{ .Environment.CIRCLE_SHA1 }}
@@ -17,33 +21,31 @@ jobs:
             - ~/repo
 
   build:node-10:
-    docker:
-      - image: circleci/node:10.15.1-stretch
+    docker: *docker-settings
     working_directory: ~/repo
     steps:
       - restore_cache:
           key: *checkout_cache_key
       - restore_cache:
           keys:
-            - v1-dependencies-node-10.15.1-{{ checksum "yarn.lock" }}
+            - v1-dependencies-node-10.16.1-{{ checksum "yarn.lock" }}
       - run:
           name: Install dependencies
           command: yarn install --pure-lock-file
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-node-10.15.1-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-node-10.16.1-{{ checksum "yarn.lock" }}
 
   lint:
-    docker:
-      - image: circleci/node:10.15.1-stretch
+    docker: *docker-settings
     working_directory: ~/repo
     steps:
       - restore_cache:
           key: *checkout_cache_key
       - restore_cache:
           keys:
-            - v1-dependencies-node-10.15.1-{{ checksum "yarn.lock" }}
+            - v1-dependencies-node-10.16.1-{{ checksum "yarn.lock" }}
       - run:
           name: Run linter
           command: yarn lint:ci -o reports/junit/js-lint-results.xml
@@ -53,15 +55,14 @@ jobs:
           path: reports/junit
 
   test:node-10:
-    docker:
-      - image: circleci/node:10.15.1-stretch
+    docker: *docker-settings
     working_directory: ~/repo
     steps:
       - restore_cache:
           key: *checkout_cache_key
       - restore_cache:
           keys:
-            - v1-dependencies-node-10.15.1-{{ checksum "yarn.lock" }}
+            - v1-dependencies-node-10.16.1-{{ checksum "yarn.lock" }}
       - run:
           name: Run tests
           command: yarn test:ci

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://gitlab.com/eidoo/ethapi-lib/compare/v1.0.2...HEAD)
 
+### Changed
+
+- [Update Node engine window in package.json](https://github.com/eidoo/ethapi-lib/issues/16).
+
 ## [v1.0.2](https://gitlab.com/eidoo/ethapi-lib/compare/v1.0.1...v1.0.2)
 
 ### Changed
