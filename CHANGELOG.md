@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://gitlab.com/eidoo/ethapi-lib/compare/v1.1.1...HEAD)
 
+### Changed
+
+- Remove node version in package.json and upgrade dependencies.
+
 ## [v1.1.1](https://gitlab.com/eidoo/ethapi-lib/compare/v1.1.0...v1.1.1)
 
 ### Changed

@@ -16,20 +16,17 @@
     "eth",
     "api"
   ],
-  "engines": {
-    "node": ">=10.0.0 <=10.19.0"
-  },
   "author": "Eidoo Sagl",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "2.14.0",
-    "jest": "24.8.0",
-    "jest-junit": "6.4.0",
-    "sinon": "7.2.2"
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "jest": "25.2.7",
+    "jest-junit": "10.0.0",
+    "sinon": "9.0.1"
   },
   "dependencies": {
-    "axios": "0.19.0"
+    "axios": "0.19.2"
   }
 }
