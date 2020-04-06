@@ -1,6 +1,6 @@
 {
   "name": "@eidoo/ethapi-lib",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A minimalistic wrapper for the ETH API service.",
   "main": "index.js",
   "scripts": {
